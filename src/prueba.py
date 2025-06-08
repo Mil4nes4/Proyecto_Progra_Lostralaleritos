@@ -34,7 +34,7 @@ def probar_modelo():
              # Dibujar un rectángulo alrededor del rostro detectado
             cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
             
-            if confidence < 7000:
+            if confidence < 5500:
                 # Mostrar la etiqueta y la confianza en el fotograma
                 cv2.putText(frame, f'ID: {label}, Conf: {confidence:.2f}', (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 0), 2)
             else:
